@@ -293,7 +293,7 @@ img{display:block;max-width:100%}
         Find trash. Clean it up. Prove it. Get rewarded. Actually save the planet.
       </p>
       <div class="hero-ctas">
-        <a href="https://3shamrocksstudio.github.io/th-mvp-web/" class="btn-play">
+        <a href="https://3shamrocksstudio.github.io/th-prototype/" class="btn-play">
           🎮 Play the Demo
         </a>
         <a href="#waitlist" class="btn-demo">
@@ -430,7 +430,7 @@ img{display:block;max-width:100%}
     </form>
     <p class="wl-note" id="wl-msg">No spam. Ever. Just your Elemonster starter pack when we launch.</p>
     <div style="margin-top:32px">
-      <a href="https://3shamrocksstudio.github.io/th-mvp-web/" 
+      <a href="https://3shamrocksstudio.github.io/th-prototype/" 
          style="color:var(--green3);font-size:14px;font-weight:600;border-bottom:1px solid rgba(74,222,128,.3);padding-bottom:2px">
         Play the demo now → No signup needed
       </a>
@@ -443,7 +443,7 @@ img{display:block;max-width:100%}
     <div class="footer-logo">🌿 Trashure<span>Hunters</span></div>
     <div class="footer-links">
       <a href="https://3shamrocksstudio.github.io/">3Shamrocks Studio</a>
-      <a href="https://3shamrocksstudio.github.io/th-mvp-web/">Play Demo</a>
+      <a href="https://3shamrocksstudio.github.io/th-prototype/">Play Demo</a>
       <a href="mailto:markodave@gmail.com">Contact</a>
     </div>
     <div class="footer-copy">© 2026 3Shamrocks Studio · Real game. Real impact.</div>
@@ -469,13 +469,10 @@ function joinWaitlist(e) {
   var email = document.getElementById('wl-email').value;
   var msg = document.getElementById('wl-msg');
   if (!email) return;
-  // Store in localStorage for now
-  try {
-    var list = JSON.parse(localStorage.getItem('th_waitlist') || '[]');
-    if (!list.includes(email)) { list.push(email); localStorage.setItem('th_waitlist', JSON.stringify(list)); }
-  } catch(err) {}
+  // No form service yet: hand the signup to the visitor's email app so it actually reaches the team.
+  location.href = 'mailto:markodave@gmail.com?subject=' + encodeURIComponent('Trashure-Hunters waitlist') + '&body=' + encodeURIComponent('Please add me to the Trashure-Hunters waitlist: ' + email);
   document.getElementById('wl-email').value = '';
-  msg.textContent = '✅ You\'re in! We\'ll email you when we launch. Your Elemonster starter pack is reserved.';
+  msg.textContent = 'Your email app is opening. Hit Send to lock in your spot.';
   msg.style.color = '#4ade80';
 }
 </script>
