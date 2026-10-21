@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Trashure-Hunters — Clean the World, Level Up</title>
-    <meta name="description" content="The eco-game where real-world trash cleanup earns XP, spawns Elemonsters, and saves the planet. Free to play.">
-    <meta property="og:title" content="Trashure-Hunters">
-    <meta property="og:description" content="Clean the world. Level up your squad.">
+    <title>Trashure-Hunters</title>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -26,57 +23,15 @@
         flex: 1;
       }
     </style>
-  <link rel="preload" href="/th-mvp-web/_expo/static/css/global-cc6da339935f0fd5939b30e36b862b6a.css" as="style"><link rel="stylesheet" href="/th-mvp-web/_expo/static/css/global-cc6da339935f0fd5939b30e36b862b6a.css"><link rel="icon" href="/th-mvp-web/favicon.ico" /></head>
+  <link rel="preload" href="/th-mvp-web/_expo/static/css/global-9409969eb21b4affa2fb20d19808b00d.css" as="style"><link rel="stylesheet" href="/th-mvp-web/_expo/static/css/global-9409969eb21b4affa2fb20d19808b00d.css"><link rel="icon" href="/th-mvp-web/favicon.ico" /></head>
 
   <body>
-
-  <style>
-    #th-splash{position:fixed;inset:0;z-index:9999;
-      background:linear-gradient(160deg,#0a1628 0%,#0d2040 40%,#0a2a0a 100%);
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      font-family:system-ui,-apple-system,sans-serif;
-      transition:opacity .6s ease,transform .6s ease;
-    }
-    #th-splash.fade{opacity:0;transform:scale(1.02);pointer-events:none}
-    .th-logo{font-size:clamp(42px,10vw,80px);font-weight:900;letter-spacing:-.04em;color:#fff;margin-bottom:8px}
-    .th-logo em{font-style:normal;color:#4ade80}
-    .th-sub{font-size:clamp(14px,3vw,18px);color:rgba(255,255,255,.55);margin-bottom:40px;font-weight:300}
-    .th-bar-wrap{width:min(280px,72vw);height:4px;background:rgba(255,255,255,.12);border-radius:2px;overflow:hidden;margin-bottom:16px}
-    .th-bar{height:100%;width:0;border-radius:2px;background:linear-gradient(90deg,#22c55e,#4ade80);
-      animation:thLoad 2.8s cubic-bezier(.4,0,.6,1) forwards}
-    @keyframes thLoad{0%{width:0}60%{width:72%}85%{width:88%}100%{width:100%}}
-    .th-hint{font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase}
-    .th-elemonster{font-size:clamp(36px,8vw,60px);margin-bottom:16px;animation:float 3s ease-in-out infinite}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-  </style>
-  <div id="th-splash">
-    <div class="th-elemonster">🌿🗑️⚔️</div>
-    <div class="th-logo">Trashure<em>Hunters</em></div>
-    <div class="th-sub">Clean up the world. Level up your squad.</div>
-    <div class="th-bar-wrap"><div class="th-bar"></div></div>
-    <div class="th-hint">Loading game…</div>
-  </div>
-  <script>
-    (function(){
-      var splash = document.getElementById('th-splash');
-      var start = Date.now();
-      var minShow = 2200; // ms
-      function tryHide(){
-        var elapsed = Date.now()-start;
-        if(elapsed >= minShow){ splash.classList.add('fade'); setTimeout(function(){ splash.style.display='none'; },650); }
-        else { setTimeout(tryHide, minShow - elapsed); }
-      }
-      // Hide after bundle loads or after min time
-      window.addEventListener('load', tryHide);
-      setTimeout(tryHide, 4000); // failsafe
-    })();
-  </script>
     <!-- Use static rendering with Expo Router to support running without JavaScript. -->
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/th-mvp-web/_expo/static/js/web/entry-bdb1678af7050f4cfd289c5731dd463a.js" defer></script>
+  <script src="/th-mvp-web/_expo/static/js/web/entry-8d3d3201249db5e84133c8ca84553c86.js" defer></script>
 </body>
 </html>
